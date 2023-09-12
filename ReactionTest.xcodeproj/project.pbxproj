@@ -23,6 +23,7 @@
 		A58CB8812AADED2A00174E4C /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A58CB8682AADEC8F00174E4C /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A58CB8842AADF8E900174E4C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CB8832AADF8E900174E4C /* MainViewModel.swift */; };
 		A58CB8882AAF20E700174E4C /* GameStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CB8872AAF20E700174E4C /* GameStatuses.swift */; };
+		A58CB8942AB080E200174E4C /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CB8932AB080E100174E4C /* ScoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		A58CB85A2AADEC8D00174E4C /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		A58CB8832AADF8E900174E4C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A58CB8872AAF20E700174E4C /* GameStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatuses.swift; sourceTree = "<group>"; };
+		A58CB8932AB080E100174E4C /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				A58CB8832AADF8E900174E4C /* MainViewModel.swift */,
 				A58CB8542AABB93E00174E4C /* MainViewController.swift */,
+				A58CB8932AB080E100174E4C /* ScoreView.swift */,
 				A58CB8582AAC6A0100174E4C /* TrafficLightsView.swift */,
 				A58CB83D2AABB8D200174E4C /* AppDelegate.swift */,
 				A58CB83F2AABB8D200174E4C /* SceneDelegate.swift */,
@@ -191,7 +194,7 @@
 				A58CB8722AADEC8F00174E4C /* AllTests-iOS.xctest */,
 				A58CB8742AADEC8F00174E4C /* AllTests-tvOS.xctest */,
 				A58CB8762AADEC8F00174E4C /* AllTests-macOS.xctest */,
-				A58CB8782AADEC8F00174E4C /* PerformanceTests.app */,
+				A58CB8782AADEC8F00174E4C /* Microoptimizations.app */,
 				A58CB87A2AADEC8F00174E4C /* Benchmarks.xctest */,
 			);
 			name = Products;
@@ -321,7 +324,7 @@
 			remoteRef = A58CB8752AADEC8F00174E4C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A58CB8782AADEC8F00174E4C /* PerformanceTests.app */ = {
+		A58CB8782AADEC8F00174E4C /* Microoptimizations.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = Microoptimizations.app;
@@ -356,6 +359,7 @@
 			files = (
 				A58CB8842AADF8E900174E4C /* MainViewModel.swift in Sources */,
 				A58CB83E2AABB8D200174E4C /* AppDelegate.swift in Sources */,
+				A58CB8942AB080E200174E4C /* ScoreView.swift in Sources */,
 				A58CB8482AABB8D200174E4C /* ReactionTest.xcdatamodeld in Sources */,
 				A58CB8882AAF20E700174E4C /* GameStatuses.swift in Sources */,
 				A58CB8592AAC6A0100174E4C /* TrafficLightsView.swift in Sources */,

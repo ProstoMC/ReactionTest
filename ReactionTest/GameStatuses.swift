@@ -13,4 +13,5 @@ enum GameStatuses {
     case ready
     case steady
     case go
+    case result
 }
