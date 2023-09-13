@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     
     var viewModel: MainViewModelProtocol!
     
+    var wallpaper = UIImageView()
     var trafficLightsView = TrafficLightsView()
     var infoLabel = UILabel()
     var scoreView = ScoreView()
@@ -34,10 +35,27 @@ extension MainViewController {
         
         view.backgroundColor = ColorList.mainBackground
         
+        setupWallpaper()
         setupTrafficLights()
         setupInfoLabel()
         setupStartButton()
         setupScoreView()
+    }
+    
+    private func setupWallpaper() {
+        
+        view.addSubview(wallpaper)
+        wallpaper.translatesAutoresizingMaskIntoConstraints = false
+        
+        wallpaper.image = UIImage(named: "wallpaper")
+        wallpaper.contentMode = .right
+        
+        NSLayoutConstraint.activate([
+            wallpaper.topAnchor.constraint(equalTo: view.topAnchor),
+            wallpaper.leftAnchor.constraint(equalTo: view.leftAnchor),
+            wallpaper.rightAnchor.constraint(equalTo: view.rightAnchor),
+            wallpaper.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     private func setupInfoLabel() {
@@ -116,7 +134,7 @@ extension MainViewController {
         view.addSubview(startButton)
         startButton.translatesAutoresizingMaskIntoConstraints = false
         
-        startButton.backgroundColor = ColorList.green
+        
         startButton.setTitleColor(ColorList.titles, for: .normal)
         //startButton.setTitle("START", for: .normal)
         startButton.titleLabel?.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.height/30, weight: .regular)
@@ -134,16 +152,16 @@ extension MainViewController {
                 self.startButton.backgroundColor = ColorList.green
                 self.startButton.setTitle("START", for: .normal)
             case .lightsOff:
-                self.startButton.backgroundColor = ColorList.trafficLightRed
+                self.startButton.backgroundColor = ColorList.red
                 self.startButton.setTitle("STOP", for: .normal)
             case .ready:
-                self.startButton.backgroundColor = ColorList.trafficLightRed
+                self.startButton.backgroundColor = ColorList.red
                 self.startButton.setTitle("STOP", for: .normal)
             case .steady:
-                self.startButton.backgroundColor = ColorList.trafficLightRed
+                self.startButton.backgroundColor = ColorList.red
                 self.startButton.setTitle("STOP", for: .normal)
             case .go:
-                self.startButton.backgroundColor = ColorList.trafficLightRed
+                self.startButton.backgroundColor = ColorList.red
                 self.startButton.setTitle("STOP", for: .normal)
             case .result:
                 self.startButton.backgroundColor = ColorList.green
